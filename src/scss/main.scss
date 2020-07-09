@@ -1,0 +1,152 @@
+$navbar-height: 3.25rem;
+$navbar-color: #487C84;
+$cta-background: #487C84;
+$font-black: #0b0b0b;
+$alt-section-background:#f5f5f5;
+
+body{
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+section{
+    &.alt{
+        background-color:$alt-section-background;
+    }
+}
+
+.button {
+    background: $cta-background;
+    border-color: $cta-background;
+    color: #fff;
+    transition: all .4s;
+    &:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        color:#fff;
+        border-color:$cta-background;
+    }
+}
+
+.content{
+    h2, h3, h4, strong{
+        font-family: 'Lobster', cursive;
+    }
+    h2{
+        font-size:3.2rem;
+    }
+    strong{
+        font-size:1.75rem;
+    }
+    p{
+        color: $font-black;
+    }
+}
+
+.navbar{
+    min-height: $navbar-height;
+    background: $navbar-color;
+    .navbar-brand{
+        .navbar-burger{
+            color:#fff;
+            span{
+                height:2px;
+            }
+        }
+    }
+    .navbar-item{
+        color:#fff;
+        font-size:1.15rem;
+        &:hover{
+            background: #41737b;
+            color:#fff;
+        }
+    }
+}
+.hero{
+    //background-image: url("../img/dogwalk-forest.jpg");
+    background-color:#205c72;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+    .hero-inner{
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        &__right{
+            padding: 0 5rem;
+            .content{
+                h1{
+                    font-size:4rem;
+                }
+                h1, p{
+                    color:#fff;
+                }
+            }
+            .social-container{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &__links{
+                    display: flex;
+                    align-items: center;
+                    span{
+                        color:#fff;
+                    }
+                    .fa-facebook, .fa-instagram{
+                        font-size:1.8rem;
+                        margin-left: 1rem;
+                        color:#fff;
+                    }
+                } 
+            }   
+        }
+    }
+}
+
+.card{
+    .card-image{
+        height:285px;
+        width:100%;
+        background-size: cover;
+        background-position: center;
+        &--first{
+            background-image: url("../img/whippetmedium.jpg");
+        }
+        &--second{
+            background-image: url("../img/cat.jpg");
+        }
+        &--third{
+            background-image: url("../img/senior.jpg");
+        }
+    }
+    &-content{
+        &__info{
+            min-height:17rem;
+        }
+        &__pricing{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                font-size:1rem;
+            }
+            .cost{
+                display:block;
+                font-size:2rem;
+                font-weight:bold;
+            }
+        }
+    }
+}
+.footer{
+    padding:3rem 1.5rem 3rem;
+    background-color:$navbar-color;
+    p, strong{
+        color:#fff;
+    }
+    span{
+        font-weight:bold;
+    }
+}
